@@ -15,9 +15,15 @@ export const site = {
   shortName: "AscendX",
   description:
     "AscendX Career Platform is the all-in-one AI-powered platform that helps you explore career options, build in-demand skills, find the right opportunities and land your dream job.",
-  url: "https://ascendx.example", // TODO: production domain
-  contactEmail: "hello@ascendx.example", // TODO: real inbox
+  url: "https://ascendxcareer.ai", // TODO: confirm this is where the marketing site will be served
+  contactEmail: "info@ascendxcareer.ai",
 };
+
+/** The AscendX web app (sign in, sign up, jobs, legal pages). */
+export const appUrl = "https://ascendxcareer.ai";
+
+/** Backend API, used by the contact form. Override per environment with NEXT_PUBLIC_API_URL. */
+export const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.ascendxcareer.ai";
 
 export const nav = [
   { label: "Home", href: "/" },
@@ -39,23 +45,24 @@ export const footerNav = [
 ] as const;
 
 export const legalNav = [
-  { label: "Privacy Policy", href: "#" },
-  { label: "Terms of Service", href: "#" },
+  { label: "Privacy Policy", href: `${appUrl}/privacy` },
+  { label: "Terms of Service", href: `${appUrl}/terms` },
+  { label: "Community Guidelines", href: `${appUrl}/community-guidelines` },
   { label: "Cookie Settings", href: "#" },
 ] as const;
 
 /** Placeholder destinations: replace "#" with real URLs when available. */
 export const cta = {
-  login: "#",
-  getStarted: "#",
-  startJourney: "#",
+  login: `${appUrl}/login`,
+  getStarted: `${appUrl}/SignUpPage`,
+  startJourney: `${appUrl}/SignUpPage`,
   postJob: "#",
   bookDemo: "#",
   bookSession: "#",
-  startLearning: "#",
+  startLearning: `${appUrl}/SignUpPage`,
   viewProjects: "#",
-  startNow: "#",
-  apply: "#",
+  startNow: `${appUrl}/SignUpPage`,
+  apply: `${appUrl}/jobs`,
   // Internal destinations
   candidates: "/candidates",
   hireTalent: "/employers",
@@ -69,7 +76,7 @@ export const cta = {
 
 export const socials = [
   { label: "LinkedIn", href: "#", icon: "linkedin" },
-  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Instagram", href: "https://instagram.com/ascendxcareer", icon: "instagram" },
   { label: "YouTube", href: "#", icon: "youtube" },
-  { label: "TikTok", href: "#", icon: "tiktok" },
+  { label: "TikTok", href: "https://tiktok.com/@ascendxcareer", icon: "tiktok" },
 ] as const;

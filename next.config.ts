@@ -1,17 +1,16 @@
 import type { NextConfig } from "next";
 
+// Static export: `npm run build` writes plain HTML/CSS/JS to ./out, which the
+// GitHub workflow uploads to Bluehost over FTP. Redirects can't run in a static
+// export, so they live in public/.htaccess instead.
 const nextConfig: NextConfig = {
   experimental: {
     agentUpgrade: "security",
   },
+  output: "export",
+  trailingSlash: true, // /about -> about/index.html, so Apache serves it without rewrites
   images: {
-    formats: ["image/avif", "image/webp"],
-  },
-  async redirects() {
-    return [
-      { source: "/individuals", destination: "/candidates", permanent: true },
-      { source: "/features", destination: "/job-board", permanent: true },
-    ];
+    unoptimized: true, // no image optimiser on a static host
   },
 };
 

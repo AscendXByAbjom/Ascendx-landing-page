@@ -1,0 +1,8 @@
+# Bluehost (Apache). Replaces the redirects() that used to live in next.config.ts.
+RewriteEngine On
+
+RewriteRule ^individuals/?$ /candidates/ [R=301,L]
+RewriteRule ^features/?$ /job-board/ [R=301,L]
+
+# Pages that don't exist get the site's 404 page.
+ErrorDocument 404 /404.html
