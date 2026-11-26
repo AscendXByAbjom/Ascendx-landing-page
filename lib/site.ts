@@ -15,12 +15,12 @@ export const site = {
   shortName: "AscendX",
   description:
     "AscendX Career Platform is the all-in-one AI-powered platform that helps you explore career options, build in-demand skills, find the right opportunities and land your dream job.",
-  url: "https://ascendxcareer.ai", // TODO: confirm this is where the marketing site will be served
+  url: "https://ascendxcareer.ai", // the marketing site is served here; the web app lives on app.ascendxcareer.ai
   contactEmail: "info@ascendxcareer.ai",
 };
 
 /** The AscendX web app (sign in, sign up, jobs, legal pages). */
-export const appUrl = "https://ascendxcareer.ai";
+export const appUrl = "https://app.ascendxcareer.ai";
 
 /** Backend API, used by the contact form. Override per environment with NEXT_PUBLIC_API_URL. */
 export const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://api.ascendxcareer.ai";
