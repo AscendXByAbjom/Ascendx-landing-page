@@ -19,7 +19,7 @@ export const site = {
   contactEmail: "info@ascendxcareer.ai",
 };
 
-/** The AscendX web app (sign in, sign up, jobs, legal pages). */
+/** The AscendX web app. The bare domain redirects to its welcome screen, where people log in or sign up. */
 export const appUrl = "https://app.ascendxcareer.ai";
 
 /** Backend API, used by the contact form. Override per environment with NEXT_PUBLIC_API_URL. */
@@ -53,16 +53,16 @@ export const legalNav = [
 
 /** Placeholder destinations: replace "#" with real URLs when available. */
 export const cta = {
-  login: `${appUrl}/login`,
-  getStarted: `${appUrl}/SignUpPage`,
-  startJourney: `${appUrl}/SignUpPage`,
+  login: appUrl,
+  getStarted: appUrl,
+  startJourney: appUrl,
   postJob: "#",
   bookDemo: "#",
   bookSession: "#",
-  startLearning: `${appUrl}/SignUpPage`,
+  startLearning: appUrl,
   viewProjects: "#",
-  startNow: `${appUrl}/SignUpPage`,
-  apply: `${appUrl}/jobs`,
+  startNow: appUrl,
+  apply: appUrl,
   // Internal destinations
   candidates: "/candidates",
   hireTalent: "/employers",
