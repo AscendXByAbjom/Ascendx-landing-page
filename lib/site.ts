@@ -45,9 +45,9 @@ export const footerNav = [
 ] as const;
 
 export const legalNav = [
-  { label: "Privacy Policy", href: `${appUrl}/privacy` },
-  { label: "Terms of Service", href: `${appUrl}/terms` },
-  { label: "Community Guidelines", href: `${appUrl}/community-guidelines` },
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Community Guidelines", href: "/community-guidelines" },
   { label: "Cookie Settings", href: "#" },
 ] as const;
 
